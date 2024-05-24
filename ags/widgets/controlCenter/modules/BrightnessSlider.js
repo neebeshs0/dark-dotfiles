@@ -2,6 +2,8 @@ import Brightness from "../../../services/Brightness.js"
 import { getBrightnessIcon } from '../../utils/GetIcon.js'
 
 export default function BrightnessSlider() {
+  const brighnessIcon = getBrightnessIcon()
+
   const brightnessSlider = Widget.Slider({
     class_name: 'brightness-slider',
     drawValue: false,
@@ -11,8 +13,6 @@ export default function BrightnessSlider() {
     max: 1,
     min: 0.01,
   })
-
-  const brighnessIcon = getBrightnessIcon()
 
   return Widget.Box({
     class_name: 'brightness-container',

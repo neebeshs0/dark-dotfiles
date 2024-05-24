@@ -1,5 +1,6 @@
 import UptimeInfo from "./modules/UptimeInfo.js"
 import BrightnessSlider from "./modules/BrightnessSlider.js"
+import VolumeSlider from "./modules/VolumeSlider.js"
 import NetworkButton from "./modules/NetworkButton.js"
 import BluetoothButton from "./modules/BluetoothButton.js"
 import PowerOptions from "./modules/PowerOptionsButton.js"
@@ -13,6 +14,7 @@ function Top() {
     children: [
       UptimeInfo(),
       BrightnessSlider(),
+      VolumeSlider(),
       Widget.CenterBox({
         hexpand: true,
         vertical: true,

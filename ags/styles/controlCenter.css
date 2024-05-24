@@ -13,6 +13,7 @@
     font-size: 16px;
     font-weight: 500;
     margin-right: 4px;
+    margin-bottom: 12px;
     color: @subtle;
 }
 
@@ -20,19 +21,28 @@
     font-size: 12px;
     font-weight: 500;
     margin-top: 4px;
+    margin-bottom: 12px;
     color: @muted;
 }
 
+.volume-slider,
 .brightness-slider {
-    margin: 8px;
-    background: @base;
-    border-radius: 24px;
+  background: @base;
+  border-radius: 24px;
+  margin-left: 8px;
 }
 
+.volume-container,
 .brightness-container {
-    background: @base;
+  background: @base;
+  margin: 4px;
 }
 
+.volume-container{
+  margin-bottom: 12px;
+}
+
+scale.volume-slider trough,
 scale.brightness-slider trough {
     min-height: 4px;
     background: @overlay;
@@ -41,6 +51,7 @@ scale.brightness-slider trough {
     opacity: 0;
 }
 
+scale.volume-slider slider,
 scale.brightness-slider slider {
     min-height: 24px;
     min-width: 24px;
@@ -49,7 +60,7 @@ scale.brightness-slider slider {
     box-shadow: none;
 }
 
-
+scale.volume-slider highlight,
 scale.brightness-slider highlight {
     background: @iris;
     border-radius: 24px;

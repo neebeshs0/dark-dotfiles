@@ -136,7 +136,6 @@ calendar:selected {
     padding: 8px;
 }
 
-
 .control-center-button {
     background: @surface;
     color: @iris;
@@ -150,7 +149,6 @@ calendar:selected {
 .control-center-button:hover {
     background: @highlightMed;
 }
-
 
 
 .reboot-button,
