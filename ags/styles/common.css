@@ -1,0 +1,59 @@
+@import url("colors.css");
+
+* {
+    border: none;
+}
+
+window.bar {
+    background: @base;
+    border-radius: 24px;
+    opacity: 0.9;
+    border: none;
+}
+
+window.popup > * {
+  border: none;
+  box-shadow: none; 
+}
+
+window.popup menu {
+  margin-top: 12px;
+  border-radius: 18px;
+  background-color: #221f1c;
+  padding: 12px; 
+}
+
+window.popup menu menuitem {
+  padding: 8px 10px;
+  color: #e9e1dc;
+  border-radius: 8px;
+  transition: background 0.1s ease; 
+}
+
+window.popup menu menuitem:hover {
+      background: #383431;
+}
+
+window.popup menu menuitem:first-child {
+      margin-top: 0; 
+}
+
+window.popup menu menuitem:last-child {
+      margin-bottom: 0; 
+}
+
+tooltip,
+tooltip > * > *  {
+  background: @base;
+  color: @text;
+  padding: 12px;
+  opacity: 0.95;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  margin: 0;
+  box-shadow: none;
+  border-radius: 24px;
+}
+
+

@@ -1,0 +1,151 @@
+@import url("colors.css");
+
+.control-center {
+    min-width: 420px;
+    min-height: 966px;
+    padding: 24px;
+    opacity: 0.95;
+    background: @base;
+    border-radius: 24px;
+}
+
+.uptime-marker {
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 4px;
+    color: @subtle;
+}
+
+.uptime-info {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 4px;
+    color: @muted;
+}
+
+.brightness-slider {
+    margin: 8px;
+    background: @base;
+    border-radius: 24px;
+}
+
+.brightness-container {
+    background: @base;
+}
+
+scale.brightness-slider trough {
+    min-height: 4px;
+    background: @overlay;
+    border-radius: 24px;
+    border: none;
+    opacity: 0;
+}
+
+scale.brightness-slider slider {
+    min-height: 24px;
+    min-width: 24px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+
+scale.brightness-slider highlight {
+    background: @iris;
+    border-radius: 24px;
+    padding: 10px;
+    border: none;
+}
+
+.control-center-buttons {
+    background: @surface;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-top: 6px;
+    border-radius: 48px;
+    opacity: 0.9;
+    text-shadow: none;
+    box-shadow: none;
+    border: 2px solid @text;
+}
+
+.control-center-buttons:hover {
+    background: @highlightMed;
+}
+
+.network-buttons-label {
+    padding: 4px;
+    font-size: 16px;
+    padding-left: 8px;
+    color: @text;
+}
+
+.spotify-container {
+    min-height: 144px;
+    padding: 12px;
+    margin-top: 24px;
+    border-radius: 24px;
+}
+
+.spotify-not-open {
+    font-size: 24px;
+    color: @text;
+    background: @highlightLow;
+}
+
+.open-spotify {
+    font-size: 48px;
+    margin: 24px;
+    margin-left: 48px;
+    background: @overlay;
+    border-radius: 8px;
+    min-width: 96px;
+    min-height: 96px;
+}
+
+.cc-track-info {
+    min-width: 396px;
+}
+
+.cc-song-button {
+    background: none;
+    color: @text;
+    border: none;
+    box-shadow: none;
+}
+
+.cc-track-name {
+    color: @text;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 12px
+}
+
+.loop-button-active {
+    color: @text;
+}
+
+.cc-artist-name {
+    margin-top: 2px;
+    color: @subtle;
+    font-size: 18px;
+}
+
+.loop-button-none {
+    color: @muted;
+}
+
+.cc-play-pause {
+    background: @overlay;
+    opacity: 0.9;
+    text-decoration: none;
+    text-shadow: none;
+    border: none;
+    box-shadow: none;
+    font-size: 18px;
+    color: @text;
+    padding: 4px 10px;
+}
