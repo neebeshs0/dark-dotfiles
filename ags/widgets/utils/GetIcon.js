@@ -1,3 +1,5 @@
+import Brightness from "../../services/Brightness.js"
+
 const audio = await Service.import('audio')
 const network = await Service.import('network')
 const bluetooth = await Service.import('bluetooth')
@@ -5,6 +7,25 @@ const bluetooth = await Service.import('bluetooth')
 const iconSize = 24
 
 App.addIcons(`${App.configDir}/assets`)
+
+export function getBrightnessIcon() {
+  const brightnessIcon = Widget.Icon({
+    css: 'color: #f6c177;',
+    size: iconSize,
+  }).hook(Brightness, self => {
+    if (Brightness.screen_value < 0.40) {
+      self.icon = "brightness_low-symbolic"
+    }
+    if (Brightness.screen_value >= 0.40 && Brightness.screen_value <= 0.75) {
+      self.icon = "brightness_medium-symbolic"
+    }
+    if (Brightness.screen_value > 0.75) {
+      self.icon = "brightness_high-symbolic"
+    }
+  })
+
+  return brightnessIcon
+}
 
 export function getBluetoothIcon() {
   const bluetoothIcon = Widget.Icon({

@@ -1,17 +1,19 @@
+import Brightness from "../../../services/Brightness.js"
+import { getBrightnessIcon } from '../../utils/GetIcon.js'
 
 export default function BrightnessSlider() {
   const brightnessSlider = Widget.Slider({
     class_name: 'brightness-slider',
     drawValue: false,
     hexpand: true,
-    min: 0,
-    max: 100,
+    on_change: self => Brightness.screen_value = self.value,
+    value: Brightness.bind('screen_value'),
+    max: 1,
+    min: 0.01,
   })
-  const brighnessIcon = Widget.Icon({
-    icon: 'display-brightness-symbolic',
-    css: 'color: #f6c177;',
-    size: 24,
-  })
+
+  const brighnessIcon = getBrightnessIcon()
+
   return Widget.Box({
     class_name: 'brightness-container',
     children: [
