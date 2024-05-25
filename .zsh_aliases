@@ -1,0 +1,10 @@
+alias cl="clear"
+
+alias edit="nvim"
+alias neofetch="fastfetch"
+
+alias ..="cd ../"
+alias config="cd ~/.config"
+alias agscon="cd ~/.config/ags/"
+alias nvimcon="cd ~/.config/nvim/"
+alias hyprcon="cd ~/.config/hypr/"
