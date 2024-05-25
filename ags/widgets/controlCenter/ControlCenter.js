@@ -5,6 +5,7 @@ import NetworkButton from "./modules/NetworkButton.js"
 import BluetoothButton from "./modules/BluetoothButton.js"
 import PowerOptions from "./modules/PowerOptionsButton.js"
 import SpotifyPlayer from "./modules/SpotifyPlayer.js"
+import SystemInfo from "./modules/SysteimInfo.js"
 
 
 function Top() {
@@ -29,10 +30,8 @@ function Top() {
             }),
             Widget.Box({
               children: [
-                Widget.Label({
-                  label: 'TODO: Notifications',
-                  css: 'min-width: 240px;'
-                })
+                SystemInfo()
+
               ]
             })
           ]

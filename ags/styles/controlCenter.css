@@ -75,7 +75,7 @@ scale.brightness-slider highlight {
     padding: 8px;
     padding-left: 18px;
     padding-right: 18px;
-    margin-top: 6px;
+    margin-top: 10px;
     border-radius: 48px;
     opacity: 0.9;
     text-shadow: none;
@@ -92,6 +92,25 @@ scale.brightness-slider highlight {
     font-size: 16px;
     padding-left: 8px;
     color: @text;
+}
+
+.cc-sysinfo-container {
+  padding: 12px;
+  padding-bottom: 0;
+  padding-right: 0;
+  margin-top: 6px;
+  margin-left: 12px;
+  border-radius: 24px;
+  background: @overlay;
+}
+
+.cc-sysinfo {
+  margin-right: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Roboto Mono', monospace;
+  color: @text;
 }
 
 .spotify-container {

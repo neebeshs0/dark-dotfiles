@@ -125,6 +125,54 @@ export function getWiredIcon(iconSize = defualtIconSize) {
   return wiredIcon
 }
 
+export function getTemperatureIcon(iconSize = defualtIconSize) {
+  const iconName = 'system_temperature-symbolic'
+
+  const temperatureIcon = Widget.Icon({
+    icon: iconName,
+    size: iconSize,
+    css: 'color: #f6c177;'
+  })
+
+  return temperatureIcon
+}
+
+export function getCpuIcon(iconSize = defualtIconSize) {
+  const iconName = 'system_cpu-symbolic'
+
+  const cpuIcon = Widget.Icon({
+    icon: iconName,
+    size: iconSize,
+    css: 'color: #9ccfd8;'
+  })
+
+  return cpuIcon
+}
+
+export function getGpuIcon(iconSize = defualtIconSize) {
+  const iconName = 'system_gpu-symbolic'
+
+  const cpuIcon = Widget.Icon({
+    icon: iconName,
+    size: iconSize,
+    css: 'color: #9ccfd8;'
+  })
+
+  return cpuIcon
+}
+
+export function getRamIcon(iconSize = defualtIconSize) {
+  const iconName = 'system_ram-symbolic'
+
+  const cpuIcon = Widget.Icon({
+    icon: iconName,
+    size: iconSize,
+    css: 'color: #9ccfd8;'
+  })
+
+  return cpuIcon
+}
+
 export function getSpotifyIcon(iconSize = defualtIconSize) {
   return Widget.Icon({
     icon: 'spotify-icon-symbolic',
@@ -152,7 +200,7 @@ export function getNextIcon(iconSize = defualtIconSize) {
 }
 
 export function getSettingsIcon(iconSize = defualtIconSize) {
-  const iconName = 'setting_-symbolic'
+  const iconName = 'system_setting-symbolic'
   const settingsIcon = Widget.Icon({
     icon: iconName,
     size: iconSize
