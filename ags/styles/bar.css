@@ -150,12 +150,10 @@ calendar:selected {
     background: @highlightMed;
 }
 
-
-.reboot-button {
-    background: @gold;
-    padding: 4px 7px;
+.bar-network-speed {
+  margin-right: 12px;
+  font-weight: 500;
+  font-size: 12px;
+  color: @subtle;
+  font-family: 'Roboto Mono', monospace;
 }
-
-
-
-

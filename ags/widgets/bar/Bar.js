@@ -1,6 +1,7 @@
 import Clock from "./modules/Clock.js"
 import WorkSpace from "./modules/Workspace.js"
 import SystemInformation from "./modules/SystemInformation.js"
+import NetworkSpeed from "./modules/NetworkSpeed.js"
 import { PlayerButtons, PlayerSong } from "./modules/Player.js"
 import ControlCenter from '../controlCenter/ControlCenter.js'
 
@@ -30,6 +31,7 @@ function Right() {
     hpack: 'end',
     class_name: 'bar-right',
     children: [
+      NetworkSpeed(),
       PlayerButtons(),
       SystemInformation(),
       ControlCenter(),
