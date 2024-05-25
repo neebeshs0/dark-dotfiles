@@ -1,0 +1,43 @@
+@import url("colors.css");
+
+.power-options-container {
+  min-width: 812px;
+  min-height: 200px;
+  border-radius: 24px;
+}
+
+.power-options-window {
+  border-radius: 24px;
+}
+
+.po-close-button,
+.po-lock-button,
+.po-reboot-button,
+.po-shutdown-button {
+  border-radius: 100%;
+  margin-right: 12px;
+  color: @base;
+}
+
+.po-close-button {
+  background: @rose;
+}
+
+.po-lock-button {
+  background: @foam;
+}
+
+.po-reboot-button {
+  background: @gold;
+}
+
+.po-shutdown-button {
+  background: @love;
+}
+
+.po-shutdown-button:hover,
+.po-lock-button:hover,
+.po-close-button:hover,
+.po-reboot-button:hover {
+    background: @pine;
+}

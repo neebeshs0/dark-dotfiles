@@ -8,8 +8,11 @@ export default function PowerOptionsButton() {
   })
 
   const powerOptionsButton = Widget.Button({
-    class_name: 'shutdown-button',
-    on_clicked: () => App.toggleWindow('power-options'),
+    class_name: 'cc-shutdown-button',
+    on_clicked: () => {
+      App.toggleWindow('power-options')
+      App.toggleWindow('control-center')
+    },
     hexpand: true,
     child: getPowerIcon()
   })

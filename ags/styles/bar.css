@@ -151,30 +151,11 @@ calendar:selected {
 }
 
 
-.reboot-button,
-.shutdown-button {
-    border-radius: 100%;
-    text-shadow: none;
-    box-shadow: none;
-    font-size: 18px;
-    color: @base;
-    margin: 2px;
-    margin-bottom: 0;
-}
-
-.shutdown-button {
-    background: @love;
-    padding: 2px 7px;
-}
-
 .reboot-button {
     background: @gold;
     padding: 4px 7px;
 }
 
-.reboot-button:hover,
-.shutdown-button:hover {
-    background: @pine;
-}
+
 
 

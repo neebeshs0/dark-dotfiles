@@ -4,11 +4,11 @@ const audio = await Service.import('audio')
 const network = await Service.import('network')
 const bluetooth = await Service.import('bluetooth')
 
-const iconSize = 24
+const defualtIconSize = 24
 
 App.addIcons(`${App.configDir}/assets`)
 
-export function getBrightnessIcon() {
+export function getBrightnessIcon(iconSize = defualtIconSize) {
   const brightnessIcon = Widget.Icon({
     css: 'color: #f6c177;',
     size: iconSize,
@@ -27,7 +27,7 @@ export function getBrightnessIcon() {
   return brightnessIcon
 }
 
-export function getBluetoothIcon() {
+export function getBluetoothIcon(iconSize = defualtIconSize) {
   const bluetoothIcon = Widget.Icon({
     icon: bluetooth.bind('enabled')
       .as(on => `bluetooth_${on ? 'active' : 'disabled'}-symbolic`),
@@ -50,7 +50,7 @@ export function getBluetoothIcon() {
 }
 
 
-export function getVolumeIcon() {
+export function getVolumeIcon(iconSize = defualtIconSize) {
   const volumeOptions = {
     101: "overamplified",
     67: "high",
@@ -74,7 +74,7 @@ export function getVolumeIcon() {
   return volumeIcon
 }
 
-export function getWifiIcon() {
+export function getWifiIcon(iconSize = defualtIconSize) {
   const wifiIcon = Widget.Icon().hook(network, icon => {
     icon.size = iconSize
     if (network.wifi.strength <= 100 && network.wifi.strength > 80) {
@@ -106,7 +106,7 @@ export function getWifiIcon() {
   return wifiIcon
 }
 
-export function getWiredIcon() {
+export function getWiredIcon(iconSize = defualtIconSize) {
   const wiredIcon = Widget.Icon().hook(network, icon => {
     icon.size = iconSize
     if (network.wired.internet === 'connected') {
@@ -125,14 +125,14 @@ export function getWiredIcon() {
   return wiredIcon
 }
 
-export function getSpotifyIcon() {
+export function getSpotifyIcon(iconSize = defualtIconSize) {
   return Widget.Icon({
-    css: 'font-size: 24px;',
-    icon: 'spotify-icon-symbolic'
+    icon: 'spotify-icon-symbolic',
+    size: iconSize,
   })
 }
 
-export function getBackIcon() {
+export function getBackIcon(iconSize = defualtIconSize) {
   App.addIcons(`${App.configDir}/assets`)
   const iconName = "media_skip_back-symbolic"
   const backIcon = Widget.Icon({
@@ -142,7 +142,7 @@ export function getBackIcon() {
   return backIcon
 }
 
-export function getNextIcon() {
+export function getNextIcon(iconSize = defualtIconSize) {
   const iconName = "media_skip_next-symbolic"
   const nextIcon = Widget.Icon({
     size: iconSize,
@@ -151,7 +151,7 @@ export function getNextIcon() {
   return nextIcon
 }
 
-export function getSettingsIcon() {
+export function getSettingsIcon(iconSize = defualtIconSize) {
   const iconName = 'setting_-symbolic'
   const settingsIcon = Widget.Icon({
     icon: iconName,
@@ -160,7 +160,7 @@ export function getSettingsIcon() {
   return settingsIcon
 }
 
-export function getPowerIcon() {
+export function getPowerIcon(iconSize = defualtIconSize) {
   const iconName = 'power_shutdown-symbolic'
   const shutdownIcon = Widget.Icon({
     icon: iconName,
@@ -169,11 +169,29 @@ export function getPowerIcon() {
   return shutdownIcon
 }
 
-export function getRebootIcon() {
+export function getRebootIcon(iconSize = defualtIconSize) {
   const iconName = 'power_restart-symbolic'
   const rebootIcon = Widget.Icon({
     icon: iconName,
     size: iconSize
   })
   return rebootIcon
+}
+
+export function getLockIcon(iconSize = defualtIconSize) {
+  const iconName = 'power_lock-symbolic'
+  const lockIcon = Widget.Icon({
+    icon: iconName,
+    size: iconSize
+  })
+  return lockIcon
+}
+
+export function getCloseIcon(iconSize = defualtIconSize) {
+  const iconName = 'system_close-symbolic'
+  const closeIcon = Widget.Icon({
+    icon: iconName,
+    size: iconSize
+  })
+  return closeIcon
 }

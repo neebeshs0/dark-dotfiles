@@ -1,27 +1,42 @@
-import { getPowerIcon, getRebootIcon } from "../utils/GetIcon.js"
+import CloseButton from "./modules/CloseButton.js"
+import RebootButton from "./modules/RebootButton.js"
+import ShutdownButton from "./modules/ShutdownButton.js"
+import LockButton from "./modules/LockButton.js"
 
 export function PowerOptionsWindow() {
-  const shutdownButton = Widget.Button({
-    class_name: 'shutdown-button',
-    on_clicked: () => Utils.execAsync('poweroff'),
-    hexpand: true,
-    child: getPowerIcon()
+
+  const leftBox = Widget.Box({
+    vertical: true,
+    children: [
+      CloseButton(),
+      RebootButton(),
+    ]
   })
 
-  const rebootButton = Widget.Button({
-    class_name: 'reboot-button',
-    on_clicked: () => Utils.execAsync('reboot'),
-    hexpand: true,
-    child: getRebootIcon()
+  const rightBox = Widget.Box({
+    vertical: true,
+    children: [
+      LockButton(),
+      ShutdownButton(),
+    ]
   })
+
 
   return Widget.Window({
     name: "power-options",
+    class_name: 'power-options-window',
     visible: false,
+    keymode: "exclusive",
+    setup: self => self.keybind("Escape", () => {
+      App.closeWindow('power-options')
+    }),
     child: Widget.Box({
+      class_name: 'power-options-container',
       children: [
-        shutdownButton,
-        rebootButton,
+        CloseButton(),
+        LockButton(),
+        RebootButton(),
+        ShutdownButton(),
       ]
     })
   })

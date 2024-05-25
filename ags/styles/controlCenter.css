@@ -160,3 +160,22 @@ scale.brightness-slider highlight {
     color: @text;
     padding: 4px 10px;
 }
+
+.reboot-button,
+.cc-shutdown-button {
+    border-radius: 100%;
+    text-shadow: none;
+    box-shadow: none;
+    font-size: 18px;
+    color: @base;
+    margin: 2px;
+    margin-bottom: 0;
+}
+
+.cc-shutdown-button {
+    background: @love;
+}
+
+.cc-shutdown-button:hover {
+    background: @pine;
+}
