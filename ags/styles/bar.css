@@ -106,13 +106,12 @@ calendar {
     background: @surface;
     border-radius: 12px;
     padding: 12px;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .date-time {
     font-size: 24px;
-    color: @gold;
-    padding-top: 108px;
+    color: @text;
     padding-right: 12px;
 }
 

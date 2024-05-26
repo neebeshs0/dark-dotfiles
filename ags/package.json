@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "nepali-datetime": "^1.2.1"
+  },
+    "type": "module"
+}
