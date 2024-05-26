@@ -101,13 +101,14 @@ bar
 calendar {
     border-radius: 24px;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 800;
     padding: 4px;
 }
 
 .calendar-container {
-    background: @surface;
+    background: @overlay;
     border-radius: 12px;
+    border: 0.5px solid  @text;
     padding: 12px;
     opacity: 0.8;
 }
@@ -120,6 +121,7 @@ calendar {
 
 calendar:selected {
     border-radius: 500px;
+    font-weight: 800;
     color: @love;
 }
 
