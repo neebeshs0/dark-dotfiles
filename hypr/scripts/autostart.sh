@@ -1,5 +1,5 @@
 #!/bin/bash
 
 hyprctl dispatch exec [workspace special:spotify silent] spotify-launcher
-sleep 1
+sleep 5
 ags
