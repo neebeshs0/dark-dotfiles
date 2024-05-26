@@ -2,12 +2,12 @@
 
 * {
     border: none;
+    background: none;
 }
 
 window.bar {
     background: @base;
     border-radius: 24px;
-    opacity: 0.9;
     border: none;
 }
 

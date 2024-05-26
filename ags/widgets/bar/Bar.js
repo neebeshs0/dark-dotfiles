@@ -48,6 +48,7 @@ export default function Bar(monitor = 0) {
     margins: [8, 8, 0],
     exclusivity: 'exclusive',
     child: Widget.CenterBox({
+      class_name: 'bar-container',
       start_widget: Left(),
       center_widget: Center(),
       end_widget: Right(),
