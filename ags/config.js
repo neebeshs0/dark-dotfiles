@@ -1,4 +1,5 @@
 import Bar from "./widgets/bar/Bar.js"
+import SettingsWindow from "./widgets//settings/Settings.js"
 import { CalendarWindow } from "./widgets/bar/modules/Clock.js"
 import { ControlCenterWindow } from "./widgets/controlCenter/ControlCenter.js"
 import { PowerOptionsWindow } from "./widgets/powerOptions/PowerOptions.js"
@@ -10,6 +11,7 @@ App.config({
     Bar(),
     CalendarWindow(),
     ControlCenterWindow(),
+    SettingsWindow(),
     PowerOptionsWindow(),
   ]
 })

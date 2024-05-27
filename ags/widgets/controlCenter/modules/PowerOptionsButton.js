@@ -4,6 +4,11 @@ import { getSettingsIcon, getPowerIcon } from "../../utils/GetIcon.js"
 export default function PowerOptionsButton() {
   const settingsButton = Widget.Button({
     hexpand: true,
+    class_name: 'cc-settings-button',
+    on_clicked: () => {
+      App.toggleWindow('settings-window')
+      App.toggleWindow('control-center')
+    },
     child: getSettingsIcon(),
   })
 

@@ -73,6 +73,7 @@ function previousButton(player) {
 
 function positionSlider(player) {
   return Widget.Slider({
+    class_name: 'spotify-slider',
     hexpand: true,
     draw_value: false,
     on_change: ({ value }) => player.position = value * player.length, visible: player.bind('length').as(l => l > 0),

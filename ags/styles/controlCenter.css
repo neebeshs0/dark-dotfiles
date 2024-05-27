@@ -169,6 +169,18 @@ scale.brightness-slider highlight {
     color: @muted;
 }
 
+scale.spotify-slider trough {
+  min-height: 4px;
+  background: @highlightMed;
+}
+
+
+scale.spotify-slider highlight {
+  background: @text;
+  border-radius: 24px;
+  border: none;
+}
+
 .cc-play-pause {
     background: @overlay;
     opacity: 0.9;
@@ -198,4 +210,15 @@ scale.brightness-slider highlight {
 
 .cc-shutdown-button:hover {
     background: @pine;
+}
+
+.cc-settings-button {
+  color: @text;
+  margin-right: 4px;
+  border-radius: 100%;
+}
+
+.cc-settings-button:hover {
+  background: @iris;
+  color: @base;
 }

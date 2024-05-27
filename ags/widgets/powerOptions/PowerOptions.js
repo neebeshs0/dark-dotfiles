@@ -1,4 +1,4 @@
-import CloseButton from "./modules/CloseButton.js"
+import getCloseButton from "../utils/GetCloseButton.js"
 import RebootButton from "./modules/RebootButton.js"
 import ShutdownButton from "./modules/ShutdownButton.js"
 import LockButton from "./modules/LockButton.js"
@@ -15,7 +15,7 @@ export function PowerOptionsWindow() {
     child: Widget.Box({
       class_name: 'power-options-container',
       children: [
-        CloseButton(),
+        getCloseButton('power-options', 'po-close-button', 48),
         LockButton(),
         RebootButton(),
         ShutdownButton(),

@@ -6,14 +6,12 @@
   border-radius: 24px;
 }
 
-.power-options-window {
-  border-radius: 24px;
-}
-
 .po-close-button,
 .po-lock-button,
 .po-reboot-button,
 .po-shutdown-button {
+  min-width: 96px;
+  min-height: 96px;
   border-radius: 100%;
   margin-right: 12px;
   color: @base;
