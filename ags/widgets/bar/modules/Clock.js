@@ -1,3 +1,4 @@
+import EscapeKeybind from "../../utils/EscapeKeybind.js"
 
 const time = Variable('', {
   poll: [1000, 'date +"%l:%M %p"'],
@@ -79,13 +80,16 @@ function CalendarRevealer() {
 }
 
 export function CalendarWindow() {
+  const windowName = 'calendar'
   return Widget.Window({
-    name: 'calendar',
+    name: windowName,
+    keymode: 'on-demand',
     class_name: 'calendar-window',
     css: 'padding: 1px;',
     anchor: ['top', 'left'],
     margins: [12, 12, 0],
     visible: false,
+    setup: self => EscapeKeybind(self, windowName),
     child: Widget.Box({
       child: CalendarRevealer()
     })

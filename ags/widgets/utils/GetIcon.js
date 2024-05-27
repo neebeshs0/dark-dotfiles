@@ -9,7 +9,7 @@ const defualtIconSize = 24
 App.addIcons(`${App.configDir}/assets`)
 
 export function getBrightnessIcon(iconSize = defualtIconSize) {
-  const brightnessIcon = Widget.Icon({
+  const icon = Widget.Icon({
     css: 'color: #f6c177;',
     size: iconSize,
   }).hook(Brightness, self => {
@@ -24,11 +24,11 @@ export function getBrightnessIcon(iconSize = defualtIconSize) {
     }
   })
 
-  return brightnessIcon
+  return icon
 }
 
 export function getBluetoothIcon(iconSize = defualtIconSize) {
-  const bluetoothIcon = Widget.Icon({
+  const icon = Widget.Icon({
     icon: bluetooth.bind('enabled')
       .as(on => `bluetooth_${on ? 'active' : 'disabled'}-symbolic`),
     size: iconSize,
@@ -46,7 +46,7 @@ export function getBluetoothIcon(iconSize = defualtIconSize) {
     }
   })
 
-  return bluetoothIcon
+  return icon
 }
 
 
@@ -66,16 +66,16 @@ export function getVolumeIcon(iconSize = defualtIconSize) {
     return `volume_${volumeOptions[icon]}-symbolic`
   }
 
-  const volumeIcon = Widget.Icon({
+  const icon = Widget.Icon({
     icon: Utils.watch(chooseVolumeIcon(), audio.speaker, chooseVolumeIcon),
     size: iconSize,
   })
 
-  return volumeIcon
+  return icon
 }
 
 export function getWifiIcon(iconSize = defualtIconSize) {
-  const wifiIcon = Widget.Icon().hook(network, icon => {
+  const icon = Widget.Icon().hook(network, icon => {
     icon.size = iconSize
     if (network.wifi.strength <= 100 && network.wifi.strength > 80) {
       icon.icon = 'wifi_4-symbolic'
@@ -103,11 +103,11 @@ export function getWifiIcon(iconSize = defualtIconSize) {
       icon.icon = 'wifi_disconnected-symbolic'
     }
   })
-  return wifiIcon
+  return icon
 }
 
 export function getWiredIcon(iconSize = defualtIconSize) {
-  const wiredIcon = Widget.Icon().hook(network, icon => {
+  const icon = Widget.Icon().hook(network, icon => {
     icon.size = iconSize
     if (network.wired.internet === 'connected') {
       icon.css = 'color:#9ccfd8;'
@@ -122,55 +122,53 @@ export function getWiredIcon(iconSize = defualtIconSize) {
       icon.icon = 'wired_disconnected-symbolic'
     }
   })
-  return wiredIcon
+  return icon
 }
 
 export function getTemperatureIcon(iconSize = defualtIconSize) {
   const iconName = 'system_temperature-symbolic'
 
-  const temperatureIcon = Widget.Icon({
+  const icon = Widget.Icon({
     icon: iconName,
     size: iconSize,
     css: 'color: #f6c177;'
   })
 
-  return temperatureIcon
+  return icon
 }
 
 export function getCpuIcon(iconSize = defualtIconSize) {
   const iconName = 'system_cpu-symbolic'
 
-  const cpuIcon = Widget.Icon({
+  const icon = Widget.Icon({
     icon: iconName,
     size: iconSize,
     css: 'color: #9ccfd8;'
   })
 
-  return cpuIcon
+  return icon
 }
 
 export function getGpuIcon(iconSize = defualtIconSize) {
   const iconName = 'system_gpu-symbolic'
-
-  const cpuIcon = Widget.Icon({
+  const icon = Widget.Icon({
     icon: iconName,
     size: iconSize,
     css: 'color: #9ccfd8;'
   })
 
-  return cpuIcon
+  return icon
 }
 
 export function getRamIcon(iconSize = defualtIconSize) {
   const iconName = 'system_ram-symbolic'
-
-  const cpuIcon = Widget.Icon({
+  const icon = Widget.Icon({
     icon: iconName,
     size: iconSize,
     css: 'color: #9ccfd8;'
   })
 
-  return cpuIcon
+  return icon
 }
 
 export function getSpotifyIcon(iconSize = defualtIconSize) {
@@ -183,63 +181,108 @@ export function getSpotifyIcon(iconSize = defualtIconSize) {
 export function getBackIcon(iconSize = defualtIconSize) {
   App.addIcons(`${App.configDir}/assets`)
   const iconName = "media_skip_back-symbolic"
-  const backIcon = Widget.Icon({
+  const icon = Widget.Icon({
     size: iconSize,
     icon: iconName,
   })
-  return backIcon
+  return icon
 }
 
 export function getNextIcon(iconSize = defualtIconSize) {
   const iconName = "media_skip_next-symbolic"
-  const nextIcon = Widget.Icon({
+  const icon = Widget.Icon({
     size: iconSize,
     icon: iconName,
   })
-  return nextIcon
+  return icon
 }
 
 export function getSettingsIcon(iconSize = defualtIconSize) {
   const iconName = 'system_setting-symbolic'
-  const settingsIcon = Widget.Icon({
+  const icon = Widget.Icon({
     icon: iconName,
     size: iconSize
   })
-  return settingsIcon
+  return icon
 }
 
 export function getPowerIcon(iconSize = defualtIconSize) {
   const iconName = 'power_shutdown-symbolic'
-  const shutdownIcon = Widget.Icon({
+  const icon = Widget.Icon({
     icon: iconName,
     size: iconSize
   })
-  return shutdownIcon
+  return icon
 }
 
 export function getRebootIcon(iconSize = defualtIconSize) {
   const iconName = 'power_restart-symbolic'
-  const rebootIcon = Widget.Icon({
+  const icon = Widget.Icon({
     icon: iconName,
     size: iconSize
   })
-  return rebootIcon
+  return icon
 }
 
 export function getLockIcon(iconSize = defualtIconSize) {
   const iconName = 'power_lock-symbolic'
-  const lockIcon = Widget.Icon({
+  const icon = Widget.Icon({
     icon: iconName,
     size: iconSize
   })
-  return lockIcon
+  return icon
 }
 
 export function getCloseIcon(iconSize = defualtIconSize) {
   const iconName = 'system_close-symbolic'
-  const closeIcon = Widget.Icon({
+  const icon = Widget.Icon({
     icon: iconName,
     size: iconSize
   })
-  return closeIcon
+  return icon
+}
+
+export function getMonitorIcon(iconSize = defualtIconSize) {
+  const iconName = 'setting_monitor-symbolic'
+  const icon = Widget.Icon({
+    icon: iconName,
+    size: iconSize
+  })
+  return icon
+}
+
+export function getThemeIcon(iconSize = defualtIconSize) {
+  const iconName = 'setting_theme-symbolic'
+  const icon = Widget.Icon({
+    icon: iconName,
+    size: iconSize
+  })
+  return icon
+}
+
+export function getDiskIcon(iconSize = defualtIconSize) {
+  const iconName = 'setting_disk-symbolic'
+  const icon = Widget.Icon({
+    icon: iconName,
+    size: iconSize
+  })
+  return icon
+}
+
+export function getNvidiaIcon(iconSize = defualtIconSize) {
+  const iconName = 'setting_gpu-symbolic'
+  const icon = Widget.Icon({
+    icon: iconName,
+    size: iconSize
+  })
+  return icon
+}
+
+export function getSpeakerIcon(iconSize = defualtIconSize) {
+  const iconName = 'setting_audio-symbolic'
+  const icon = Widget.Icon({
+    icon: iconName,
+    size: iconSize
+  })
+  return icon
 }

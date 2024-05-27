@@ -1,11 +1,108 @@
 @import url("colors.css");
 
 .settings-window {
-  background: @base;
-  border-radius: 24px 24px 0 0;
-  opacity: 0.95;
+  background: @surface;
+  border-radius: 0 24px 24px 0;
+  border: 0.8px solid @muted;
+  border-left: none;
 }
 
 .settings-container {
-  min-height: 480px;
+  min-width: 444px;
+}
+
+.st-top-container {
+  padding: 12px;
+  border-radius: 0 24px 24px 24px;
+  background: @highlightHigh;
+}
+
+.st-center-container {
+  min-height: 876px;
+  border-radius: 24px;
+  padding: 24px;
+  padding-top: 0;
+  background: @overlay;
+  margin-top: 24px;
+}
+
+.st-bottom-container {
+  padding: 12px;
+  color: @muted;
+  font-size: 12px;
+}
+
+.st-top-icon {
+  font-size: 18px;
+  font-weight: bold;
+  color: @subtle;
+}
+
+.st-close-button,
+.st-top-buttons {
+  border-radius: 100%;
+  color: @text;
+}
+
+.st-close-button:hover {
+  background: @love;
+  color: @base;
+}
+
+.st-top-buttons:hover {
+  background: @text;
+  color: @base;
+}
+
+.st-hyprland-sections {
+  color: @text;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 24px;
+  margin-bottom: 6px;
+}
+
+.st-slider-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.st-slider-container {
+  padding: 12px;
+  border: 1px  solid @muted;
+  border-radius: 8px;
+  padding-right: 48px;
+  margin-top: 6px;
+}
+
+.st-slider {
+  margin-top: 6px;
+}
+
+scale.st-slider value {
+  color: @subtle;
+}
+
+scale.st-slider marks {
+  font-size: 12px;
+  color: @muted;
+  margin-top: 6px;
+}
+
+scale.st-slider trough {
+  background: @highlightMed;
+}
+
+scale.st-slider slider {
+  min-height: 2px;
+  min-width: 2px;
+  background: @text;
+}
+
+scale.st-slider highlight {
+  min-height: 4px;
+  background: @subtle;
+  border-radius: 24px;
+  border: none;
 }

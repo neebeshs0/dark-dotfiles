@@ -6,6 +6,7 @@ import BluetoothButton from "./modules/BluetoothButton.js"
 import PowerOptions from "./modules/PowerOptionsButton.js"
 import SpotifyPlayer from "./modules/SpotifyPlayer.js"
 import SystemInfo from "./modules/SysteimInfo.js"
+import EscapeKeybind from "../utils/EscapeKeybind.js"
 
 
 function Top() {
@@ -71,14 +72,17 @@ function ControlCenterContainer() {
 
 
 export function ControlCenterWindow() {
+  const windowName = 'control-center'
   return Widget.Window({
-    name: 'control-center',
+    name: windowName,
     class_name: 'control-center-window',
+    keymode: 'on-demand',
     visible: false,
     css: 'padding: 1px;',
     margins: [8, 8, 0],
     anchor: ['top', 'right'],
     child: ControlCenterContainer(),
+    setup: self => EscapeKeybind(self, windowName)
   })
 }
 
@@ -90,6 +94,6 @@ export default function ControlCenter() {
     child: Widget.Icon({
       icon: 'expand_more-symbolic',
       css: 'font-size: 24px;'
-    })
+    }),
   })
 }

@@ -137,7 +137,7 @@ function loopButton(player) {
   })
 }
 
-function Top(player) {
+function Top() {
   return Widget.Box({
     children: [
       spotifyIcon()
@@ -188,7 +188,7 @@ export default function SpotifyPlayer() {
       background-position: center; 
       background-size: cover; 
       background-repeat: no-repeat;`) : 'background: #26233a;',
-    startWidget: Top(spotify),
+    startWidget: Top(),
     centerWidget: Center(spotify),
     endWidget: Bottom(spotify)
   })

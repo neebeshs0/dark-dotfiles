@@ -8,3 +8,5 @@ alias config="cd ~/.config"
 alias agscon="cd ~/.config/ags/"
 alias nvimcon="cd ~/.config/nvim/"
 alias hyprcon="cd ~/.config/hypr/"
+
+alias pacinstalled="pacman -Q | grep"
