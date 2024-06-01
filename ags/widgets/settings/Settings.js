@@ -4,6 +4,7 @@ import GeneralSection from "./modules/GeneralSection.js"
 import DecorationSection from "./modules/DecorationSection.js"
 import EscapeKeybind from "../utils/EscapeKeybind.js"
 import { getSettingsIcon } from "../utils/GetIcon.js"
+import BlurSection from "./modules/BlurSection.js"
 
 function Top() {
   return Widget.CenterBox({
@@ -33,6 +34,7 @@ function Center() {
       children: [
         GeneralSection(),
         DecorationSection(),
+        BlurSection(),
       ]
     })
   })

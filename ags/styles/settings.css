@@ -62,13 +62,19 @@
   margin-bottom: 6px;
 }
 
-.st-slider-title {
+.st-variable-title {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 4px;
 }
 
-.st-slider-container {
+.st-variable-default{
+  color: @muted;
+  font-size: 12px;
+  margin-right: 12px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.st-variable-container {
   padding: 12px;
   border: 1px  solid @muted;
   border-radius: 8px;
@@ -80,9 +86,29 @@
   margin-top: 6px;
 }
 
-scale.st-slider value {
-  color: @subtle;
+.toggle-container {
+  padding:24px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
+
+switch.st-switch {
+  background: @base;
+  border-radius: 24px;
+}
+
+switch.st-switch slider {
+  background: @subtle;
+  border-radius: 24px;
+}
+
+switch.st-switch image{
+  color: @text;
+  background: @overlay;
+  border-radius: 24px;
+  margin :  2px 6px ;
+}
+
 
 scale.st-slider marks {
   font-size: 12px;
@@ -98,6 +124,10 @@ scale.st-slider slider {
   min-height: 2px;
   min-width: 2px;
   background: @text;
+}
+
+scale.st-slider value{
+  color: @text;
 }
 
 scale.st-slider highlight {

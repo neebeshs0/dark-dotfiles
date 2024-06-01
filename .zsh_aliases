@@ -1,6 +1,7 @@
 alias cl="clear"
 
 alias edit="nvim"
+alias edit.="nvim ."
 alias neofetch="fastfetch"
 
 alias ..="cd ../"

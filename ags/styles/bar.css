@@ -1,43 +1,58 @@
 @import url("colors.css");
 
+.bar-container {
+  background: @base;
+  border-radius: 24px;
+  border: none;
+  opacity: 0.8;
+}
+
+.bar-left,
+.bar-center,
+.bar-right {
+  background: @base;
+  opacity: 1;
+}
+
+
 .bar-left {
-    margin-left: 24px;
+  margin-left: 24px;
+  opacity: 1;
 }
 
 .bar-right {
-    margin-right: 24px;
+  margin-right: 24px;
+  opacity: 1;
 }
 
 .song-button {
-    background: @base;
-    border: 0 transparent;
+  background: @base;
+  border: 0 transparent;
 }
 
-.bar {
-  opacity: 0.95;
-}
 
 .bar-ws-container,
 .bar-ws-notfocused,
 .bar-ws-focused {
-    min-width: 24px;
-    background: none;
-    border: 0 transparent;
-    font-size: 18px;
-    font-weight: 500;
-    text-shadow: none;
-    border-radius: 8px;
-    padding: 4px;
-    margin-right: 6px;
+  min-width: 24px;
+  background: none;
+  border: 0 transparent;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 1;
+  text-shadow: none;
+  border-radius: 8px;
+  padding: 4px;
+  margin-right: 6px;
 }
 
 .bar-ws-notfocused {
-    color: @highlightMed;
+  color: @highlightMed;
 }
 
 .bar-ws-notfocused:hover {
-    background: @highlightLow;
-    color: @text;
+  background: @highlightLow;
+  color: @text;
 }
 
 .bar-ws-focused{
@@ -55,10 +70,11 @@
 }
 
 .song-title {
-    font-size: 18px;
-    font-weight: 500;
-    color: @foam;
-    background: none;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 1;
+  color: @foam;
+  background: @base;
 }
 
 .song-button {
@@ -97,7 +113,6 @@
     background: none;
 }
 
-bar
 calendar {
     border-radius: 24px;
     font-size: 20px;

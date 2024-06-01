@@ -1,0 +1,56 @@
+@import url("colors.css");
+
+
+.app-launcher-container {
+  border: 2px solid @muted;
+  border-bottom: 0px;
+  border-radius: 24px 24px 0 0;
+  opacity: 0.9;
+  background: @surface;
+}
+
+.al-app-entry {
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid @foam;
+  margin-left: 12px;
+  background: @base;
+  min-width: 800px;
+}
+
+.al-app-entry-container {
+  margin: 24px;
+}
+
+.al-app-scrollable {
+  border-radius: 12px;
+  min-width: 400px;
+  min-height: 540px;
+  margin: 0 12px;
+}
+
+.al-app-title {
+  color: @text;
+  font-size: 18px;
+  margin-left: 12px;
+}
+
+.al-app-item {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid @highlightMed;
+}
+
+
+.al-app-item:hover {
+  border: 2px solid @foam;
+  background: @highlightHigh;
+}
+
+.al-app-list-container {
+  background: @overlay;
+  border: 2px solid @subtle;
+  border-radius: 24px;
+  padding: 24px;
+}

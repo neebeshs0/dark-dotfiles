@@ -1,5 +1,8 @@
+import { getConfigIntValue, getConfigFloatValue } from "./getHyprlandConfigValue.js"
+const hyprland = await Service.import('hyprland')
 
 export default function HyprlandSlider(
+  section,
   title,        // Name of hyprland variables
   digits,       // The number of decimal places that are displayed in the value
   configValue,  // The value in the hyprland config
@@ -9,15 +12,32 @@ export default function HyprlandSlider(
   toolTip       // Description of what the slider does on hover
 ) {
 
+
   const titleLabel = Widget.Label({
     hpack: 'start',
     tooltipText: toolTip,
-    class_name: 'st-slider-title',
+    class_name: 'st-variable-title',
     label: `${title}`
   })
 
+
+
+  const defaultIntLabel = Widget.Label({
+    hpack: 'start',
+    class_name: 'st-variable-default',
+    label: getConfigIntValue(section, title).bind()
+  })
+
+  const defaultFloatLabel = Widget.Label({
+    hpack: 'start',
+    class_name: 'st-variable-default',
+    label: getConfigFloatValue(section, title).bind()
+  })
+
+
   const valueSlider = Widget.Slider({
     class_name: 'st-slider',
+    on_change: ({ value }) => hyprland.messageAsync(`keyword ${section}:${title} ${value}`),
     drawValue: true,
     digits: digits,
     max: maxValue,
@@ -28,12 +48,44 @@ export default function HyprlandSlider(
   })
 
   return Widget.Box({
-    class_name: 'st-slider-container',
+    class_name: 'st-variable-container',
     hexpand: true,
     vertical: true,
-    children: [
-      titleLabel,
-      valueSlider,
-    ]
+
+  }).hook(hyprland, self => {
+    if (digits > 0) {
+      self.children = [
+        titleLabel,
+        Widget.Box({
+          children: [
+            Widget.Label({
+              class_name: 'st-variable-default',
+              css: 'margin-right: 0;',
+              hpack: 'start',
+              label: 'Default = '
+            }),
+            defaultFloatLabel,
+          ]
+        }),
+        valueSlider,
+      ]
+    }
+    if (digits <= 0) {
+      self.children = [
+        titleLabel,
+        Widget.Box({
+          children: [
+            Widget.Label({
+              class_name: 'st-variable-default',
+              css: 'margin-right: 0;',
+              hpack: 'start',
+              label: 'Default = '
+            }),
+            defaultIntLabel,
+          ]
+        }),
+        valueSlider,
+      ]
+    }
   })
 }

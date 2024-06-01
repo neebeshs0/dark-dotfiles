@@ -24,7 +24,7 @@ export default function NetworkButton() {
             label: 'Wired'
           }).hook(network, self => {
             if (network.wired.internet === 'connected' || network.wired.internet === 'connecting') {
-              self.label = `${network.wired.state}`
+              self.label = `${network.wired.internet}`
             }
             if (network.wifi.internet === 'disconnected') {
               self.label = 'No Internet >:['

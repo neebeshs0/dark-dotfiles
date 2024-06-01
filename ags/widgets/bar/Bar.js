@@ -18,6 +18,7 @@ function Left() {
 
 function Center() {
   return Widget.Box({
+    className: 'bar-center',
     hpack: 'center',
     children: [
       PlayerSong(),
@@ -42,7 +43,6 @@ function Right() {
 export default function Bar(monitor = 0) {
   return Widget.Window({
     name: `bar-${monitor}`,
-    class_name: 'bar',
     monitor,
     anchor: ['top', 'left', 'right'],
     margins: [8, 8, 0],

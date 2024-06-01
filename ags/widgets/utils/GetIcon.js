@@ -286,3 +286,13 @@ export function getSpeakerIcon(iconSize = defualtIconSize) {
   })
   return icon
 }
+
+export function getSearchIcon(iconSize = defualtIconSize) {
+  const iconName = "app_search-symbolic"
+  const icon = Widget.Icon({
+    size: iconSize,
+    icon: iconName,
+    css: 'color: #e0def4;'
+  })
+  return icon
+}
